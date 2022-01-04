@@ -1,0 +1,13 @@
+export { default as Audio } from './loaders/Audio';
+export { default as Oval } from './loaders/Oval';
+export { default as TailSpin } from './loaders/TailSpin';
+export { default as Spinning } from './loaders/Spinning';
+export { default as Puff } from './loaders/Puff';
+export { default as Rings } from './loaders/Rings';
+export { default as Grid } from './loaders/Grid';
+export { default as Hearts } from './loaders/Hearts';
+export { default as ThreeDots } from './loaders/ThreeDots';
+export { default as Circles } from './loaders/Circles';
+export { default as Bars } from './loaders/Bars';
+export { default as BallTriangle } from './loaders/BallTriangle';
+export { default as Preloader } from './Preloader';

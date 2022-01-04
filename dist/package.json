@@ -1,0 +1,34 @@
+{
+  "name": "react-preloader-icon",
+  "version": "1.0.1",
+  "description": "SVG loading icons component for React.",
+  "main": "index.js",
+  "module": "esm/index.js",
+  "browser": "umd/preloader.umd.js",
+  "typings": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UYEONG/react-preloader-icon.git"
+  },
+  "keywords": [
+    "preloader",
+    "svg",
+    "loading",
+    "icon"
+  ],
+  "author": "UYEONG <uyeong21c@gmail.com> (http://blog.coderifleman.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UYEONG/react-preloader-icon/issues"
+  },
+  "homepage": "https://github.com/UYEONG/react-preloader-icon#readme",
+  "dependencies": {
+    "bezier-easing": "^2.1.0",
+    "tslib": "^2.3.1"
+  },
+  "peerDependencies": {
+    "@types/react": "^17.0.38",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

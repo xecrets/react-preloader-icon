@@ -24,8 +24,7 @@ export default {
       terser({
         output: {
           comments: false
-        },
-        sourcemap: true
+        }
       })
     ]
   }],

@@ -1,6 +1,6 @@
 {
   "name": "react-preloader-icon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SVG loading icons component for React.",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
@@ -8,16 +8,16 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "prepare": "install-peers",
-    "dev": "chokidar --initial \"src/**/*.ts\" \"src/**/*.tsx\" -c \"yarn build\"",
+    "dev": "chokidar --initial \"src/**/*.ts\" \"src/**/*.tsx\" -c \"npm run build\"",
     "build:cjs": "tsc --module commonjs --outDir dist",
     "build:esm": "tsc --module es2015   --outDir dist/esm",
     "build:umd": "rollup -c rollup.config.js",
     "build:cpf": "node copyfiles.js",
     "tsc": "tsc -p tsconfig.json -d --allowJs --noEmit false --emitDeclarationOnly --declarationDir dist",
-    "build": "concurrently -n esm,cjs,umd,tsc,cpf \"yarn build:esm\" \"yarn build:cjs\" \"yarn build:umd\" \"yarn tsc\" \"yarn build:cpf\"",
-    "lint:pt": "prettier --print-width 120 --single-quote --trailing-comma es5 --write \"src/**/*.ts*\"",
-    "lint:ts": "tslint -p tsconfig.json src/**/*.ts{,x}",
-    "lint": "yarn lint:pt && yarn lint:ts --fix",
+    "build": "concurrently -n esm,cjs,umd,tsc,cpf \"npm run build:esm\" \"npm run build:cjs\" \"npm run build:umd\" \"npm run tsc\" \"npm run build:cpf\"",
+    "lint:pt": "prettier --end-of-line auto --print-width 120 --single-quote --trailing-comma es5 --write \"src/**/*.ts*\"",
+    "lint:es": "eslint src/**/*.ts{,x}",
+    "lint": "npm run lint:pt && npm run lint:es --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -37,29 +37,29 @@
   },
   "homepage": "https://github.com/UYEONG/react-preloader-icon#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
-    "chokidar-cli": "^2.1.0",
-    "concurrently": "^5.1.0",
-    "fs-extra": "^8.1.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.2",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^7.0.0",
+    "fs-extra": "^10.0.0",
     "install-peers-cli": "^2.2.0",
-    "prettier": "^1.19.1",
-    "rollup": "^2.0.6",
-    "rollup-plugin-terser": "^5.3.0",
-    "rollup-plugin-typescript2": "^0.26.0",
-    "tslint": "^6.1.0",
-    "tslint-config-airbnb": "^5.11.2",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-react": "^4.2.0",
-    "typescript": "^3.8.3"
-  },
+    "prettier": "^2.5.1",
+    "rollup": "^2.63.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.1",
+    "typescript": "^4.5.4",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb": "^19.0.4"
+},
   "dependencies": {
     "bezier-easing": "^2.1.0",
-    "tslib": "^1.11.1"
+    "tslib": "^2.3.1"
   },
   "peerDependencies": {
-    "@types/react": "^16.9.23",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "@types/react": "^17.0.38",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
